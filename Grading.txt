@@ -1,0 +1,38 @@
+Final Release:
+
+In our final release, there are parts of the original game that will not be implemented.
+
+
+1. Originally, we were planning on implementing all the cards in the deck- 60 total. Due to complications, we were forced to remove certain cards
+   that do not fit in any common category. We have a total of 30 cards, triplicated to fill out the deck. 
+
+2. The cards that are implemented do not all necessarily follow what is dicatated on the card. For simplicity's sake, we have downgraded the 
+   complexity so that each card either deals damage to a certain player(s) and/or heals its caster. 
+
+3. Some cards require a dice roll. We have made all dice rolls random- not depending on any user input. 
+
+4. The cards and rolls that require glyph computations will not be implemented. 
+
+
+The Bugs that we know about but will/ have not fixed: 
+
+1. Currently, the turns are not regulated according to the order determined by the actual board game. The players simply go in numeric order.
+   This has not been fixed, because our game just started to function correctly, and we do not want to add implementation at this time that might
+   possibly be detrimental the game's functionality. 
+
+2. The game does not always recognize that a player with 0 health is dead. It allows him to continue to play. We have tried debugging this, and 
+   each time that we change the code, the game either crashes or simply stays stuck in a loop. Eventually, we decided it was better to have a 
+   functional game that cycles through rounds rather than one that gets stuck consistently. 
+
+Additionally, we have had to rewrite LocalGameActual, GameStateActual, HumanActual, and Deck. We also deleted various other classes including 
+all enum classes. 
+
+To Play This Game: 
+
+1. Select the cards that you wish to play. If you play invalid cards, the screen will flash and not let you take a turn. 
+   A valid spell consists of only one of each type of card: Source, Quality, and Delivery. The type of each card is denoted in the bottom right- hand
+   corner with an S,Q, or D. 
+
+2. Select the ready button. This will cause the cards to flash up onto the focus cards in the middle of the screen. The AI's will take their turn.
+
+3. Repeat. 
